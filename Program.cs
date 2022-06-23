@@ -19,13 +19,14 @@ int lungArray = cibi_preferiti.Length;
 
 //EXTRA - BONUS
 bool verify = false;
+string userCibo = null;
 
 do
 {
     //chiedere all'utente il suo cibo preferito
     Console.WriteLine("\nScrivi il tuo cibo preferito");
 
-    string userCibo = Console.ReadLine();
+    userCibo = Console.ReadLine();
 
     //verificare che il cibo inserito dall'utente sia inserito nel array
     for (int i = 0; i < lungArray; i++)
@@ -36,25 +37,40 @@ do
         }
     }
 
+    if (!verify)
+    {
+        Console.WriteLine("\nL'input inserito non corrisponde, riprova!");
+    }
+
 } while (!verify);
 
 
 //generare un numero random
 Random rnd = new Random();
-int randomNumber = rnd.Next(0, lungArray);
-
-Console.WriteLine(randomNumber);
-
+int cpuNumber = rnd.Next(0, lungArray - 1);
 
 
 //stampa elementi array
 Console.WriteLine($"La tua classifica contiene {lungArray} cibi:");
 
-int k = 1;
 for(int i = 0; i < lungArray; i++)
 {
-    Console.WriteLine($"{k} - {cibi_preferiti[i]}");
-    k++;
+    if (cibi_preferiti[i] == userCibo && i == cpuNumber)
+    {
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} - Abbiamo gli stessi gusti");
+    }
+    else if (cibi_preferiti[i] == userCibo)
+    {
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} - Questo è il tuo cibo preferito");
+    }
+    else if (i == cpuNumber)
+    {
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} - Questo è il mio cibo preferito");
+    }
+    else
+    {
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]}");
+    }
 }
 
 Console.WriteLine($"\nIl tuo cibo preferito è: {cibi_preferiti[0]}");
