@@ -19,7 +19,7 @@ int lungArray = cibi_preferiti.Length;
 
 //EXTRA - BONUS
 bool verify = false;
-string userCibo = null;
+string userCibo;
 
 do
 {
@@ -61,11 +61,11 @@ for(int i = 0; i < lungArray; i++)
     }
     else if (cibi_preferiti[i] == userCibo)
     {
-        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} - Questo è il tuo cibo preferito");
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} --> Questo è il tuo cibo preferito");
     }
     else if (i == cpuNumber)
     {
-        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} - Questo è il mio cibo preferito");
+        Console.WriteLine($"{i + 1} - {cibi_preferiti[i]} --> Questo è il mio cibo preferito");
     }
     else
     {
