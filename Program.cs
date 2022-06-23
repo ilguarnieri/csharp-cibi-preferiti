@@ -3,11 +3,13 @@
 string[] cibi_preferiti = {
 "Tiramisù",
 "Salmone con crema di pistacchio",
+"Pizza",
 "Pasta al forno",
+"Sushi",
 "Carciofi ripieni",
 "Roast beef",
 "Torta al cioccolato",
-"Orecchiette alle cime di rapa"
+"Orecchiette alle cime di rapa",
 };
 
 int lungArray = cibi_preferiti.Length;
@@ -21,14 +23,16 @@ for(int i = 0; i < lungArray; i++)
     k++;
 }
 
-Console.WriteLine($"Il tuo cibo preferito è: {cibi_preferiti[0]}");
-Console.WriteLine($"Il tuo cibo preferito ma non troppo è: { cibi_preferiti[lungArray - 1]}");
+Console.WriteLine($"\nIl tuo cibo preferito è: {cibi_preferiti[0]}");
+Console.WriteLine($"\nIl tuo cibo preferito ma non troppo è: { cibi_preferiti[lungArray - 1]}");
+
+int metaArray = lungArray / 2;
 
 if(lungArray % 2 == 0)
 {
-    Console.WriteLine("pari");
+    Console.WriteLine($"\nCibo mediani: {cibi_preferiti[metaArray - 1]}, {cibi_preferiti[metaArray]}");
 }
 else
 {
-    Console.WriteLine("dispari");
+    Console.WriteLine($"\nCibo mediani: {cibi_preferiti[metaArray]}");
 }
