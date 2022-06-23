@@ -20,6 +20,7 @@ int lungArray = cibi_preferiti.Length;
 //EXTRA - BONUS
 bool verify = false;
 string userCibo;
+int cpuNumber;
 
 do
 {
@@ -46,8 +47,7 @@ do
 
 
 //generare un numero random
-Random rnd = new Random();
-int cpuNumber = rnd.Next(lungArray);
+cpuNumber = new Random().Next(lungArray);
 
 
 //stampa elementi array
