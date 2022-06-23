@@ -51,7 +51,7 @@ cpuNumber = new Random().Next(lungArray);
 
 
 //stampa elementi array
-Console.WriteLine($"La tua classifica contiene {lungArray} cibi:");
+Console.WriteLine($"\nLa tua classifica contiene {lungArray} cibi:");
 
 for(int i = 0; i < lungArray; i++)
 {
