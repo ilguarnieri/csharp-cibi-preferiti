@@ -39,7 +39,7 @@ do
 
     if (!verify)
     {
-        Console.WriteLine("\nL'input inserito non corrisponde, riprova!");
+        Console.WriteLine("\nIl cibo inserito non è in classifica, riprova!");
     }
 
 } while (!verify);
