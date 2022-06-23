@@ -47,7 +47,7 @@ do
 
 //generare un numero random
 Random rnd = new Random();
-int cpuNumber = rnd.Next(0, lungArray - 1);
+int cpuNumber = rnd.Next(lungArray);
 
 
 //stampa elementi array
@@ -88,8 +88,6 @@ if(lungArray % 2 == 0)
 }
 else
 {
-    //array dispary stampa il cibo a metà
+    //array dispari stampa il cibo a metà
     Console.WriteLine($"\nCibo mediani: {cibi_preferiti[metaArray]}");
 }
-
-
